@@ -15,17 +15,22 @@ struct ContactListView: View {
         NavigationView {
             List {
                 ForEach(persons, id: \.emailAddress) { person in
-                    Section(header: Text("\(person.fullName)")) {
+                    Section(header: Text(person.fullName)) {
                         
                         HStack {
-                            Image(systemName: "phone")
-                                .foregroundColor(.blue)
-                            Text(person.phoneNumber)
+                            Label(
+                                title: { Text(person.phoneNumber) },
+                                icon: { Image(systemName: "phone")
+                                    .foregroundColor(.blue) }
+                            )
                         }
+                        
                         HStack {
-                            Image(systemName: "tray.and.arrow.down")
-                                .foregroundColor(.blue)
-                            Text(person.emailAddress)
+                            Label(
+                                title: { Text(person.emailAddress) },
+                                icon: { Image(systemName: "tray.and.arrow.down")
+                                    .foregroundColor(.blue) }
+                            )
                         }
                     }
                 }

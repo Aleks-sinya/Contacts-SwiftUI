@@ -19,20 +19,25 @@ struct DescriptionContactView: View {
                     .resizable()
                     .frame(width: 150, height: 150)
                 Spacer()
-                
-            }
-            HStack {
-                Image(systemName: "phone")
-                    .foregroundColor(.blue)
-                Text(detailPerson.phoneNumber)
-            }
-            HStack {
-                Image(systemName: "tray.and.arrow.down")
-                    .foregroundColor(.blue)
-                Text(detailPerson.emailAddress)
             }
             
-            .navigationTitle("\(detailPerson.fullName)")
+            HStack {
+                Label(
+                    title: { Text(detailPerson.phoneNumber) },
+                      icon: { Image(systemName: "phone")
+                    .foregroundColor(.blue) }
+                )
+            }
+            
+            HStack {
+                Label(
+                    title: { Text(detailPerson.emailAddress) },
+                    icon: { Image(systemName: "tray.and.arrow.down")
+                    .foregroundColor(.blue) }
+                )
+            }
+            
+            .navigationTitle(detailPerson.fullName)
             .navigationBarTitleDisplayMode(.automatic)
         }
     }
@@ -40,11 +45,6 @@ struct DescriptionContactView: View {
 
 struct DescriptionContactView_Previews: PreviewProvider {
     static var previews: some View {
-        DescriptionContactView(detailPerson: Person(
-            name: "Alex",
-            surName: "Smith",
-            phoneNumber: "+7-392-305-84-00",
-            emailAddress: "bkmgbnf@yandex.ru")
-        )
+        DescriptionContactView(detailPerson: Person.getPerson().first!)
     }
 }

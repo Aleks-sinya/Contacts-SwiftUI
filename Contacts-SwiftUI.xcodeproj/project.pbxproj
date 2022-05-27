@@ -61,7 +61,7 @@
 		A1C6A5342840E39900AC170F /* Contacts-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				A1C6A5472840E49300AC170F /* Services */,
+				A1C6A5472840E49300AC170F /* Model */,
 				A1C6A5352840E39900AC170F /* Contacts_SwiftUIApp.swift */,
 				A1C6A5372840E39900AC170F /* ContentView.swift */,
 				A1C6A54A2840E70700AC170F /* ContactsView.swift */,
@@ -81,13 +81,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		A1C6A5472840E49300AC170F /* Services */ = {
+		A1C6A5472840E49300AC170F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				A1C6A5432840E40F00AC170F /* DataManager.swift */,
 				A1C6A5452840E47F00AC170F /* Person.swift */,
 			);
-			path = Services;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
