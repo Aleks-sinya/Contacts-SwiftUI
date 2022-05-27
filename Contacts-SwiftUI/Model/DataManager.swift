@@ -9,7 +9,7 @@ import Foundation
 
 class DataManager {
     
-    static let info = DataManager()
+    static let shared = DataManager()
     
     let names = [
         "James",
@@ -62,4 +62,6 @@ class DataManager {
         "oeorj@yandex.ru",
         "qpwerj@icloud.com"
     ]
+    
+    private init() {}
 }
